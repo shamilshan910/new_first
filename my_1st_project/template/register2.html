@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>SIGN UP</title>
+</head>
+<body style="background-color:black;">
+<div style="background-color:green;height:100%;width:100%;">
+	<div style="height:500px">
+	<form method="POST" >
+
+		<h2 style="color:white;">SIGN UP</h2>
+		{% csrf_token%}
+		<label style="color:white;">user name</label>
+		<input type="text" name="username"><br>
+		<label style="color:white;">first name</label>
+		<input type="text" name="first_name"><br>
+		<label style="color:white;">last name</label>
+		<input type="text" name="last_name"><br>
+		<label style="color:white;">e mail</label>
+		<input type="email" name="email"><br>
+		<label style="color:white;">password</label>
+		<input type="password" name="password"><br>
+		<label style="color:white;">confirm password</label>
+		<input type="password" name="cpassword"><br>
+		<input type="submit">
+	</form>
+		{% for msg in messages %}
+		<ul><li>{{msg}}</li></ul>
+		{% endfor %}
+		</div>
+</div>
+</body>
+</html>
